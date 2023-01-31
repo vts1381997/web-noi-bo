@@ -1,0 +1,106 @@
+body {
+    background-color: white; 
+}
+
+#wrapper {
+    display: flex
+}
+
+#txtUsername {
+    background-color: transparent;
+    border: solid 1px black
+}
+
+#left, #right {
+    min-height: 300px
+}
+
+#left {
+    width: 40%;
+    float: left;
+    background-color: white;
+    margin-left: 5px
+}
+
+#right {
+    width: 40%;
+    float: right;
+    background-color: white
+}
+
+#boxTitle {
+    border: solid 1px black;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold
+}
+
+#boxContent {
+    border: solid 1px black;
+    border-top: none;
+    padding: 5px
+}
+
+#sayHi {
+    text-align: center;
+    margin-bottom: 15px
+}
+
+#btnRegister {
+    float: right;
+    margin-bottom: 15px
+}
+
+#listMessages {
+    height: 300px;
+    background-color: lightblue;
+    overflow: auto;
+    margin-bottom: 15px;
+}
+
+#listMessagesPerson {
+    height: 300px;
+    background-color: #f1f3f4;
+    overflow: auto;
+    margin-bottom: 15px;
+}
+
+#txtMessage {
+    background-color: transparent;
+    border: solid 1px black
+}
+
+#btnLogout {
+    margin-left: 5px
+}
+
+#listUserOnline {
+    text-align: center;
+    width: 200px;
+    height: 440px;
+    padding-top: 10px;
+    border-right: 1px solid #E5E5E9;
+    font-family: "Segoe UI", "SegoeuiPc", "San Francisco", "Helvetica Neue", "Helvetica", "Lucida Grande", "Roboto", "Ubuntu", "Tahoma", Microsoft Sans Serif, Tahoma, Arial, sans-serif;
+    font-weight: 500; 
+    line-height: 2.5
+}
+
+#strong {
+    margin-left: 35px;
+}
+
+div::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.5em;
+    position: absolute;
+    right: 0;
+}
+
+div::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.2);
+} 
+
+div::-webkit-scrollbar-track {
+    background: none;
+} 

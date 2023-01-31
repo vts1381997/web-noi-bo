@@ -1,0 +1,31 @@
+.login-page {
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/background/company.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.background-login {
+    width: 30%;
+    margin-left: 35%;
+    height: 50%;
+    position: absolute;
+}
+.login-form{
+    width: 30%;
+    max-width: 350px;
+    max-height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20px);
+    border: 2px solid #1890ff;
+    padding: 20px;
+    box-shadow: 3px 3px 4px #1890ff;
+    background: #fff;
+    border-radius: 5px
+
+}
+.login-form-forgot{
+    float: right;
+}

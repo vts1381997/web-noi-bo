@@ -1,0 +1,14 @@
+diff a/client/src/configs/router.config.js b/client/src/configs/router.config.js	(rejected hunks)
+@@ -21,6 +21,11 @@
+         component: User,
+         name: 'user'
+     },
++    {
++        path: '/quan-ly-dia-ban',
++        component: About,
++        name: 'About'
++    },
+ ]
+ 
+ export default routers
+\ No newline at end of file

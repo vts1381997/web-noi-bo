@@ -1,0 +1,445 @@
+#root {
+  width: 100% !important;
+  height: 100% !important;
+}
+.ant-menu-dark .ant-menu-item a {
+  color: #fff;
+}
+.modal-loading {
+  position: fixed;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+.loading-ring {
+  position: absolute;
+  /*Moves the word loading down and into the center of the page*/
+  top: 50% !important;
+  left: 50% !important;
+  /*Moves the circle and loading word to the center of the page*/
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  /*Makes the word loading have a transparent background*/
+  background: transparent;
+  /*Creates a square*/
+  border: 3px solid #3c3c3c;
+  /*turns the square to a circle*/
+  border-radius: 50% !important;
+  /* Aligns the word Loading to the right so it is in the center of the circle*/
+  text-align: center;
+  /*Moves the word Loading down and into the center of the circle*/
+  line-height: 150px;
+  /*Set font type*/
+  font-family: sans-serif;
+  /*Size font*/
+  font-size: 20px;
+  /*Sets font color*/
+  color: #ff69b4;
+  /*Spaces out letters*/
+  letter-spacing: 4px;
+  /*makes text uppercase*/
+  text-transform: uppercase;
+  /*To create glow effect*/
+  text-shadow: 0 0 10px #ff69b4;
+  /* Creates dark shadow around circle*/
+  box-shadow: 0 0 20px rgb(0, 0, 0, 0.5);
+}
+/*Creates yellow spinner ring*/
+.loading-ring:before {
+  content: "";
+  position: absolute;
+  /*originally set to 0px, but it was off, so changed to -3px to align with the loading circle*/
+  top: -3px;
+  left: -3px;
+  width: 100% !important;
+  height: 100% !important;
+  /*Creates half a circle for the spinner portion*/
+  border: 3px solid transparent;
+  /*creates only top and right square border portion*/
+  border-top: 3px solid #ff69b4;
+  border-right: 3px solid #ff69b4;
+  /*turns the box radius into a half circle :) */
+  border-radius: 50% !important;
+  /*creates animation*/
+  animation: animateCircle 2s linear infinite;
+}
+/*Creates dial for the spinner to follow*/
+.loading-ring span {
+  /*display: block; starts a new line for the HTML span element*/
+  display: block;
+  position: absolute;
+  /* The calc() function takes a single expression as its parameter, with the expression's result used as the value */
+  top: calc(50% - 2px);
+  left: 50% !important;
+  width: 50% !important;
+  height: 4px;
+  background: transparent;
+  transform-origin: left;
+  animation: animate 2s linear infinite;
+}
+/*creates the ball for the spinner to follow*/
+.loading-ring span:before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50% !important;
+  background: #ff69b4;
+  /*moves the ball to the top of the line created in the previous span*/
+  top: -6px;
+  right: -8px;
+  box-shadow: 0 0 20px #ff69b4;
+}
+/*Now the fun part, the ring will move with the ball that we set with the animate and animateCircle variables*/
+@keyframes animateCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+
+.ant-row.ant-form-item {
+  margin-bottom: 8px;
+}
+.abc{
+  height: 50px;
+}
+#components-dropdown-demo-dropdown-button .ant-dropdown-button {
+  margin: 0 8 8 0;
+}
+.ant-modal-header {
+  padding: 16px 24px;
+  color: rgba(0, 0, 0, 0.65);
+  background: #1890ff;
+  border-bottom: 1px solid #e8e8e8;
+  border-radius: 4px 4px 0 0;
+}
+.mg-bt-10 {
+  margin-bottom: 10px;
+}
+/*-------------------------filter ---------*/
+.drawer-filter .ant-drawer-body{
+  max-height: 380px;
+  overflow: auto  
+}
+.select-filter {
+  min-width: 150px;
+}
+
+.select-filter {
+  min-width: 150px;
+}
+
+.select-filter .ant-select-selection {
+  border: none !important;
+}
+
+.select-filter
+  .ant-select-selection
+  .ant-select-selection__rendered
+  .ant-select-selection-selected-value {
+  width: 100% !important;
+  color: white !important;
+}
+.select-filter .ant-select-selection .ant-select-arrow .ant-select-arrow-icon {
+  color: white !important;
+}
+
+.filter-select-column .ant-select-selection {
+  background-color: rgb(230, 194, 33);
+}
+.filter-select-logic .ant-select-selection {
+  background-color: rgb(230, 194, 33);
+}
+.filter-select-compare .ant-select-selection {
+  background-color: rgb(230, 194, 33);
+}
+.filer-float-block {
+  float: left;
+  margin-right: 10px;
+}
+.filter-select-logic {
+  min-width: 100px !important;
+}
+.filer-float-block .anticon-close,
+.filer-float-block .anticon-plus {
+  font-size: 16px;
+  margin-top: 3px;
+}
+
+.filter-condition-column {
+  max-width: 200px;
+  float: left;
+}
+.filter-condition-compare {
+  max-width: 150px;
+  float: left;
+}
+.filter-condition-value {
+  max-width: 300px;
+  float: left;
+}
+.filter-column-grid {
+  float: left;
+  margin-right: 10px;
+}
+
+.filer-float-block .ant-select-selection__rendered,
+.filter-column-grid .ant-select-selection__rendered {
+  line-height: 23px !important;
+}
+
+.filer-float-block .ant-select-selection--single,
+.filter-column-grid .ant-select-selection--single {
+  height: 25px !important;
+}
+
+.filter-column-grid input {
+  height: 25px !important;
+  line-height: 13px !important;
+  width: 200px !important;
+}
+/* end filter*/
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace !important;
+}
+
+.action-show{
+  display: '' !important;
+}
+.ant-row.ant-form-item{
+  margin-bottom:8px !important;
+}
+
+.ant-form-item-control {
+  position: relative !important;
+  line-height: 20px !important;
+  zoom: 1 !important;
+}
+.ant-form-item-label {
+  display: inline-block !important;
+  overflow: hidden !important;
+  line-height: 30px !important;
+  white-space: nowrap !important;
+  text-align: right !important;
+  vertical-align: middle !important;
+}
+.ant-modal-header {
+  padding: 16px 24px !important;
+  color: rgba(0, 0, 0, 0.65) !important;
+  background:#1890ff !important;
+  border-bottom: 1px solid #bda2a2 !important;
+  border-radius: 4px 4px 0 0 !important;
+}
+.ant-input-sm {
+
+  height: 24px !important;
+  padding: 1px 3px !important;
+  line-height: 12px !important;
+
+}
+.ant-modal-title {
+  margin: 0 !important;
+  color: rgba(0, 0, 0, 0.85) !important;
+  font-weight: 500 !important;
+  font-size: 22px !important;
+  line-height: 22px !important;
+  word-wrap: break-word !important;
+  color: #fff !important;
+}
+.ant-form label {
+  font-size: 15px !important;
+}
+.ant-modal-close-x {
+  font-size: 20px !important;
+}
+
+.toan {
+  padding: 0px !important;
+
+margin-top: 0px !important;
+
+margin-bottom: 0px !important;
+}
+
+.ant-table table {
+  text-align: center !important;
+  border-collapse: collapse !important;
+  line-height: 1 !important;
+}
+
+.ant-table-thead > tr > th {
+  color: rgba(0, 0, 0, 0.85) !important;
+  font-weight: 500 !important;
+  text-align: center !important;
+  font-size: 15px !important;
+}
+
+/* .ant-card-body {
+  padding: 4px !important!important;
+  zoom: 1!important;
+} */
+.ant-card-body {
+  padding: 7px !important;
+  zoom: 1 !important;
+}
+
+thead[class*="ant-table-thead"] th{
+  background-color: cornflowerblue !important;
+  color: #fff !important;
+}
+
+.hidden-action {
+  display: none !important;
+}
+
+.ant-card-head-title {
+  display: inline-block !important;
+  flex: 1 !important;
+  padding: 16px 0 !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+  text-align: center !important;
+  font-size: 24px !important;
+}
+#label-gioitinh{
+  position: relative !important;
+}
+
+#label-gioitinh::after {
+  content: '' !important;
+  display: inline-block !important;
+  width: 50% !important;
+  left: 25% !important;
+  position: absolute!important;
+  z-index: 2 !important;
+  bottom: 0px !important;
+  border: 1px solid gray !important;
+}
+                               
+/* dasboard*/
+
+#dasboard-widget-top .ant-card-body {
+  padding: 10px !important
+}
+
+/* #caption{
+  font-size: 40px;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+} */
+
+/* .flexible-modal {
+  position: absolute;
+  z-index: 99999999999999999;
+  border: 1px solid #ccc;
+  background: white;
+  top:10;
+}
+.flexible-modal-mask {
+  position: fixed;
+  z-index: 999999999;
+  height: 100% !important;
+  background: rgba(55, 55, 55, 0.6);
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+.flexible-modal-resizer {
+  position:absolute;
+ 
+  right:0;
+  bottom:0;
+  cursor:se-resize;
+  margin:5px;
+  border-bottom: solid 2px #333;
+  border-right: solid 2px #333;
+}
+.flexible-modal-drag-area{
+  background: rgba(22, 22, 333, 0.2);
+  height: 50px;
+  position:absolute;
+  right:0;
+  top:0;
+  cursor:move;
+} */
+
+.clickRowStyl{
+  background-color: #00b4ed !important
+}
+
+.login-page {
+  width: 100% !important;
+  height: 100% !important;
+  background-image: url(../images/background/company.jpg) !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+.background-login {
+  width: 30% !important;
+  margin-left: 35% !important;
+  height: 50% !important;
+  position: absolute !important;
+}
+.login-form{
+  width: 30% !important;
+  max-width: 350px !important;
+  max-height: 250px !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, 20px) !important;
+  border: 2px solid #1890ff !important;
+  padding: 20px !important;
+  box-shadow: 3px 3px 4px #1890ff !important;
+  background: #fff !important;
+  border-radius: 5px !important;
+
+}
+.login-form-forgot{
+  float: right !important;
+}
+  
+.demo-infinite-container {
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  overflow: auto;
+  padding: 8px 24px;
+  height: 300px;
+}
+.demo-loading-container {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  text-align: center;
+}
+
+a.hoverthongbao:hover {
+  text-decoration: underline !important;
+}
+
+#menu-noti-top .ant-tabs-bar {
+  margin: 0px !important;
+}
