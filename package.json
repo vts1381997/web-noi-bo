@@ -19,6 +19,7 @@
     "devextreme": "^19.2.7",
     "devextreme-aspnet-data-nojquery": "^2.3.0",
     "devextreme-react": "^19.1.4",
+    "dotenv": "^16.0.3",
     "downloadjs": "^1.4.7",
     "ejs": "^2.6.2",
     "express": "^4.17.1",
@@ -55,7 +56,7 @@
     "xlsx": "^0.15.1"
   },
   "scripts": {
-    "start": "concurrently \"npm run dev\" \"node app.js\" \"node server.js\"",
+    "start": "concurrently \"npm run dev\" \"node app.js\"",
     "react": "react-scripts start",
     "watch": "webpack-dev-server --config ./webpack.config.js --open --hot",
     "dev": "webpack-dev-server --config ./webpack.dev.config.js",
